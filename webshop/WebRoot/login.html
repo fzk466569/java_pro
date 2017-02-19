@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>魁魁儿家居城</title>
+</head>
+<style type="text/css">
+body {
+	margin: 0 0 0 0;
+}
+
+label{
+    size:10;
+}
+.top {
+	width: 100%;
+	height: 1px;
+	
+}
+.nav{
+	width: 100%;
+	height: 450px;
+	background-image:url("images/UserLogin.png");
+	clear: left;
+	background-repeat: no-repeat;
+    background-size: 100%;
+}
+.menu{
+	width: 100%px;
+	height: 80px;
+	background-color:#FFFFFF;
+	clear: left;
+}
+.a{
+margin:70px 100px;
+width:200px;
+border:1px solid black;
+background-color:#FAFAD2;
+height:200px;
+float:right;
+padding:50px 100px 50px 30px;
+bgcolor:pink;
+}
+.a form{
+margin-left: 60px;
+}
+.a form input{
+}
+</style>
+<body>
+    <div class="top"></div>
+	<div class="logo"><img alt="" src="images/LogoBig.png">
+	
+	</div>
+	
+	<div class="nav">
+	
+    <div id="darkbannerwrap"></div>
+    <div class="a">
+    <form method="post" action="UserLoginServlet">
+        <label style="font-size:28px;margin-left:20px;font-family:'SimHei'">用户登录</label>
+		<input name="action" value="login" type="hidden">
+		<input name="username" placeholder="用户名" type="text">
+		<hr class="hr15" width="152px">
+		<input name="password" placeholder="密码" type="password">
+		<hr class="hr15" width="152px">
+		<label style="font-size:12px;"><a href="UserChangePassServlet">忘记密码？</a></label><br>
+		没有账号，去<label style="font-size:12px;"><a href="reg.html">注册</a></label>？
+		<input value="登录" style="width:100%;margin-top: 25px;margin-left: 7px;" type="submit">
+	</form>
+</div>
+	
+	</div>
+	<div class="menu">
+		<P align="center" style="margin: 70px">
+		<FONT color="black" style="font-size: 9pt;line-height: 200%"><span style="margin-top: 10px;display: inline-block;">中国·山西省·太原市万柏林区窊流路66号　邮编：030024<BR>晋ICP备11007549号 Copyright@ 2004-2015 太原科技大学 All rights reserved</span></FONT>
+	</div>
+
+
+
+    
+</body>
+</html>

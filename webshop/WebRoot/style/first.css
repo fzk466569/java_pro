@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+.out{width: 300px;height: 150px;background: yellow;padding: 10px;}
+#out{width: 300px;height: 150px;background: gray;}
+
+.txt {
+  width: 150px;
+  height: 20px;
+  line-height: 30px;
+  overflow: hidden;
+  padding-left: 3px;
+  background: url(style/txt.gif) no-repeat center;
+}

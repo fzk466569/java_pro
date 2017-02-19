@@ -1,0 +1,160 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>商品列表</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<link type="text/css" rel="stylesheet" href="../style/style.css" />
+
+
+</head>
+<body>
+<div class="bgimg"></div>
+<div class="pagetop" style="margin-left: 100px">
+	<img src="../LOGO2.png" height="100%"/>
+					</div><div class="right">
+	<div class="now">
+		<a href="admin.php?mod=product" class="sel">商品列表</a>
+		
+		<a href="admin.php?mod=product&act=add" style="float:right" id="fabu">添加商品</a>
+		<div class="clear"></div>
+	</div>
+	<div class="search">
+		<form method="get">
+		<input type="hidden" name="mod" value="product" />
+		<input type="hidden" name="filter" value="" />
+		商品名称：<input type="text" name="name" value="" class="inputtext input200" />
+		<select name="category_id" class="selectmini">
+		<option value="" href="?mod=product&state=1">全部分类</option>
+				<option value="1" href="?mod=product&state=1&category_id=1" >客厅</option>
+				<option value="1" href="?mod=product&state=1&category_id=1" >餐厅</option>
+				<option value="1" href="?mod=product&state=1&category_id=1" >卧房</option>
+				<option value="1" href="?mod=product&state=1&category_id=1" >书房</option>
+				<option value="1" href="?mod=product&state=1&category_id=1" >办公家具</option>
+				<option value="1" href="?mod=product&state=1&category_id=1" >儿童家具</option>
+				<option value="1" href="?mod=product&state=1&category_id=1" >家居百货</option>
+				<option value="1" href="?mod=product&state=1&category_id=1" >家居日用</option>
+				<option value="1" href="?mod=product&state=1&category_id=1" >精品家纺</option>
+				<option value="1" href="?mod=product&state=1&category_id=1" >家居饰品</option>
+				</select>
+		
+		<input type="submit" value="搜索" class="input2" />
+		</form>
+	</div>
+	<form method="post" id="form">
+	<table border="0" cellspacing="0" cellpadding="0" class="list">
+	<tr>
+		<th class="bgtt" width="10"><input type="checkbox" name="checkall" onclick="pe_checkall(this, 'product_id')" /></th>
+		<th class="bgtt" width="50">ID号</th>
+		<th class="bgtt" width="40"></th>
+		<th class="bgtt" width="50">商品名称</th>
+		<th class="bgtt" width="90">商品分类</th>
+		<th class="bgtt" width="80">品牌名称</th>
+		<th class="bgtt" width="60">单价</th>
+		<th class="bgtt" width="50">库存</th>
+	
+		<th class="bgtt" width="50">上架</th>
+		<th class="bgtt" width="70">数据营销</th>
+		<th class="bgtt" width="90">操作</th>
+	</tr>
+		<tr>
+		<td><input type="checkbox" name="product_id[]" value="2" /></td>
+		<td>2</td>
+		<td style="padding:5px 7px"><img src="http://10.25.134.98/data/cache/thumb/2016-10/thumb_40x40_nopic.gif" width="40" height="40" class="imgbg" /></td>	
+		<td class="aleft" style="padding-left:0"><a class="cblue" href="http://10.25.134.98/product/2" target="_blank"></a></td>
+		<td class="font13"></td>
+		<td class="font13"></td>
+		<td><span class="num corg">1</span></td>
+		<td class="num"><span class="cred strong">1</span></td>
+		<!--<td class="num">0</td>-->
+		<td>
+						<a href="admin.php?mod=product&act=state&state=2&id=2&token=292cfab74ed29d21240599470a92ee8b"><img src="http://10.25.134.98/template/default/admin/images/dui.png" /></a>
+					</td>
+		<td style="padding-left:50px">
+			
+		
+			<a href="admin.php?mod=product&act=sell&id=2&fromto=http%3A%2F%2F10.25.134.98%2Fadmin.php%3Fmod%3Dproduct%26state%3D1" class="fabu_btnbig fl"  onclick="return pe_dialog(this, '设置销量', 360, 136, 'product_sell')"margin-left="40px">销量<br/>0</a>
+		</td>
+		<td>
+			<a href="admin.php?mod=product&act=edit&id=2&fromto=http%3A%2F%2F10.25.134.98%2Fadmin.php%3Fmod%3Dproduct%26state%3D1" class="admin_edit mar5">修改</a>
+			<a href="admin.php?mod=product&act=del&id=2&token=292cfab74ed29d21240599470a92ee8b" class="admin_del" onclick="return pe_cfone(this, '删除')">删除</a>
+		</td>
+	</tr>
+		<tr>
+		<td><input type="checkbox" name="product_id[]" value="1" /></td>
+		<td>1</td>
+		<td style="padding:5px 7px"><img src="http://10.25.134.98/data/cache/thumb/2016-10/thumb_40x40_nopic.gif" width="40" height="40" class="imgbg" /></td>	
+		<td class="aleft" style="padding-left:0"><a class="cblue" href="http://10.25.134.98/product/1" target="_blank"></a></td>
+		<td class="font13"></td>
+		<td class="font13"></td>
+		<td><span class="num corg">1</span></td>
+		<td class="num"><span >1</span></td>
+		<!--<td class="num">0</td>-->
+		<td>
+						<a href="admin.php?mod=product&act=state&state=2&id=1&token=292cfab74ed29d21240599470a92ee8b"><img src="http://10.25.134.98/template/default/admin/images/dui.png" /></a>
+					</td>
+		<td style="padding-left:50px">
+			
+			<a href="admin.php?mod=product&act=sell&id=1&fromto=http%3A%2F%2F10.25.134.98%2Fadmin.php%3Fmod%3Dproduct%26state%3D1" class="fabu_btnbig fl" onclick="return pe_dialog(this, '设置销量', 360, 136, 'product_sell')">销量<br/>0</a>
+		</td>
+		<td>
+			<a href="admin.php?mod=product&act=edit&id=1&fromto=http%3A%2F%2F10.25.134.98%2Fadmin.php%3Fmod%3Dproduct%26state%3D1" class="admin_edit mar5">修改</a>
+			<a href="admin.php?mod=product&act=del&id=1&token=292cfab74ed29d21240599470a92ee8b" class="admin_del" onclick="return pe_cfone(this, '删除')">删除</a>
+		</td>
+	</tr>
+		
+	</table>
+	</form>
+</div>
+<script charset="utf-8" src="http://10.25.134.98/include/plugin/artdialog/jquery.artDialog.js?skin=chrome"></script>
+<script charset="utf-8" src="http://10.25.134.98/include/plugin/artdialog/plugins/iframeTools.js"></script>
+<script type="text/javascript">
+function product_move() {
+	var product_id = new Array();
+	if ($("input[name='product_id[]']").filter(":checked").length == 0) {
+		alert('请先勾选需要转移的商品!');
+		return false;
+	}
+	$("input[name='product_id[]']").filter(":checked").each(function(i){
+		product_id[i] = $(this).val();
+	})
+	product_id = product_id.join(',');
+	art.dialog.open("http://10.25.134.98/admin.php?mod=product&act=move&id="+product_id, {title:'批量转移商品'});
+}
+$(function(){
+	$("select").change(function(){
+		window.location.href = 'admin.php' + $(this).find("option:selected").attr("href");
+	})
+})
+</script>
+		<div class="clear"></div>
+	</div>
+	<!--<div class="foot">Copyright <span class="num">©</span> 2008-2014 <a target="_blank" href="http://www.phpshe.com">灵宝简好网络科技有限公司</a> 版权所有</div>-->
+</div>
+<script type="text/javascript">
+function win_init() {
+	$(".left").add(".right").css("height", $(window).height() - 50);
+}
+$(function(){
+	win_init();
+	$(window).resize(function() {
+		win_init();
+	});
+	$(".list").find("td").hover(
+		function(){
+			if ($(this).hasClass("bgtt") || $(this).is("[nosel=1]")) return;
+			$(this).parent("tr").children("td[nosel!=1]").css("background-color", "#FFFFE0");
+		},
+		function(){
+			if ($(this).hasClass("bgtt") || $(this).is("[nosel=1]")) return;
+			$(this).parent("tr").children("td[nosel!=1]").css("background-color", "#fff");
+		}
+	)
+})
+pe_loadscript("http://10.25.134.98/index.php?mod=notice");
+</script>
+</body>
+</html>
